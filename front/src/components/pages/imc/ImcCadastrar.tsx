@@ -20,7 +20,7 @@ function ImcCadastrar() {
 
     cadastrar(novoImc)
       .then(() => {
-        navigate("/imc/listar");
+        navigate("/pages/imc/listar");
       });
   }
 

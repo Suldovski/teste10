@@ -1,3 +1,5 @@
+
+### 1. CADASTRAR IMC - Ana Souza (Normal)
 POST http://localhost:5000/api/imc/cadastrar
 Content-Type: application/json
 
@@ -9,22 +11,126 @@ Content-Type: application/json
 
 ###
 
+### 2. CADASTRAR IMC - Carlos Lima (Sobrepeso)
+POST http://localhost:5000/api/imc/cadastrar
+Content-Type: application/json
+
+{
+  "nome": "Carlos Lima",
+  "altura": 1.82,
+  "peso": 95
+}
+
+###
+
+### 3. CADASTRAR IMC - Marcos Pereira (Sobrepeso)
+POST http://localhost:5000/api/imc/cadastrar
+Content-Type: application/json
+
+{
+  "nome": "Marcos Pereira",
+  "altura": 1.78,
+  "peso": 90
+}
+
+###
+
+### 4. CADASTRAR IMC - Maria Silva (Magreza)
+POST http://localhost:5000/api/imc/cadastrar
+Content-Type: application/json
+
+{
+  "nome": "Maria Silva",
+  "altura": 1.65,
+  "peso": 48
+}
+
+###
+
+### 5. CADASTRAR IMC - João Santos (Obesidade I)
+POST http://localhost:5000/api/imc/cadastrar
+Content-Type: application/json
+
+{
+  "nome": "João Santos",
+  "altura": 1.75,
+  "peso": 95
+}
+
+###
+
+### 6. LISTAR TODOS OS IMCs
 GET http://localhost:5000/api/imc/listar
 
 ###
 
+### 7. LISTAR POR STATUS - Normal
 GET http://localhost:5000/api/imc/listarporstatus/Normal
 
 ###
 
+### 8. LISTAR POR STATUS - Sobrepeso
 GET http://localhost:5000/api/imc/listarporstatus/Sobrepeso
 
 ###
 
-PUT http://localhost:5000/api/imc/alterar/SUBSTITUIR_POR_ID
+### 9. LISTAR POR STATUS - Magreza
+GET http://localhost:5000/api/imc/listarporstatus/Magreza
+
+###
+
+### 10. LISTAR POR STATUS - Obesidade I
+GET http://localhost:5000/api/imc/listarporstatus/Obesidade I
+
+###
+
+### 11. LISTAR POR STATUS - Obesidade (busca parcial - retorna I, II, III)
+GET http://localhost:5000/api/imc/listarporstatus/Obesidade
+
+###
+
+### 12. ALTERAR IMC - Ana Souza (altura: 1.72, peso: 70)
+### ATENÇÃO: Substituir {id} pelo ImcId retornado no cadastro da Ana Souza
+PUT http://localhost:5000/api/imc/alterar/{id}
 Content-Type: application/json
 
 {
   "altura": 1.72,
   "peso": 70
+}
+
+###
+
+### 13. ALTERAR IMC - Exemplo com ID fictício
+### ATENÇÃO: Substituir por um ID real após cadastrar
+PUT http://localhost:5000/api/imc/alterar/a1b2c3d4-e5f6-7890-abcd-ef1234567890
+Content-Type: application/json
+
+{
+  "altura": 1.68,
+  "peso": 62
+}
+
+###
+
+### TESTE DE VALIDAÇÃO - Altura inválida (deve retornar erro)
+POST http://localhost:5000/api/imc/cadastrar
+Content-Type: application/json
+
+{
+  "nome": "Teste Erro",
+  "altura": 0,
+  "peso": 70
+}
+
+###
+
+### TESTE DE VALIDAÇÃO - Peso inválido (deve retornar erro)
+POST http://localhost:5000/api/imc/cadastrar
+Content-Type: application/json
+
+{
+  "nome": "Teste Erro",
+  "altura": 1.70,
+  "peso": -5
 }

@@ -44,7 +44,7 @@ function ImcAlterar() {
 
     alterar(parseInt(idSelecionado), imcAtualizado)
       .then(() => {
-        navigate("/imc/listar");
+        navigate("/pages/imc/listar");
       });
   }
 

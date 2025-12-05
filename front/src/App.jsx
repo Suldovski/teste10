@@ -14,26 +14,26 @@ function App() {
               <Link to="/">Início</Link>
             </li>
             <li>
-              <Link to="/imc/cadastrar">Cadastrar IMC</Link>
+              <Link to="/pages/imc/cadastrar">Cadastrar IMC</Link>
             </li>
             <li>
-              <Link to="/imc/listar">Listar IMCs</Link>
+              <Link to="/pages/imc/listar">Listar IMCs</Link>
             </li>
             <li>
-              <Link to="/imc/listarporstatus">Listar por Classificação</Link>
+              <Link to="/pages/imc/listarporstatus">Listar por Classificação</Link>
             </li>
             <li>
-              <Link to="/imc/alterar">Alterar IMC</Link>
+              <Link to="/pages/imc/alterar">Alterar IMC</Link>
             </li>
           </ul>
         </nav>
 
         <Routes>
           <Route path="/" element={<h1>Sistema de IMC</h1>} />
-          <Route path="/imc/cadastrar" element={<ImcCadastrar />} />
-          <Route path="/imc/listar" element={<ImcListar />} />
-          <Route path="/imc/listarporstatus" element={<ImcListarPorStatus />} />
-          <Route path="/imc/alterar" element={<ImcAlterar />} />
+          <Route path="/pages/imc/cadastrar" element={<ImcCadastrar />} />
+          <Route path="/pages/imc/listar" element={<ImcListar />} />
+          <Route path="/pages/imc/listarporstatus" element={<ImcListarPorStatus />} />
+          <Route path="/pages/imc/alterar" element={<ImcAlterar />} />
         </Routes>
       </div>
     </BrowserRouter>
