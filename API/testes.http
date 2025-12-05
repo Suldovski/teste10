@@ -1,0 +1,30 @@
+POST http://localhost:5000/api/imc/cadastrar
+Content-Type: application/json
+
+{
+  "nome": "Ana Souza",
+  "altura": 1.70,
+  "peso": 65
+}
+
+###
+
+GET http://localhost:5000/api/imc/listar
+
+###
+
+GET http://localhost:5000/api/imc/listarporstatus/Normal
+
+###
+
+GET http://localhost:5000/api/imc/listarporstatus/Sobrepeso
+
+###
+
+PUT http://localhost:5000/api/imc/alterar/SUBSTITUIR_POR_ID
+Content-Type: application/json
+
+{
+  "altura": 1.72,
+  "peso": 70
+}
